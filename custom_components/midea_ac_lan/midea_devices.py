@@ -1,17 +1,24 @@
 from homeassistant.const import (
     Platform,
-    TIME_DAYS,
-    TIME_HOURS,
-    TIME_MINUTES,
-    TIME_SECONDS,
-    TEMP_CELSIUS,
-    POWER_WATT,
-    PERCENTAGE,
-    VOLUME_LITERS,
-    ENERGY_KILO_WATT_HOUR,
+    UnitOfTime,
+    UnitOfTemperature,
+    UnitOfPower,
+    UnitOfVolume,
+    UnitOfEnergy,
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    CONCENTRATION_PARTS_PER_MILLION
+    CONCENTRATION_PARTS_PER_MILLION,
+    PERCENTAGE
 )
+
+TIME_DAYS = UnitOfTime.DAYS
+TIME_HOURS = UnitOfTime.HOURS
+TIME_MINUTES = UnitOfTime.MINUTES
+TIME_SECONDS = UnitOfTime.SECONDS
+TEMP_CELSIUS = UnitOfTemperature.CELSIUS
+POWER_WATT = UnitOfPower.WATT
+VOLUME_LITERS = UnitOfVolume.LITERS
+ENERGY_KILO_WATT_HOUR = UnitOfEnergy.KILO_WATT_HOUR
+
 from homeassistant.components.binary_sensor import BinarySensorDeviceClass
 from homeassistant.components.sensor import SensorStateClass, SensorDeviceClass
 from .midea.devices.x26.device import DeviceAttributes as X26Attributes
